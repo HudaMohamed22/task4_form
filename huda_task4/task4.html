@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORM</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="task4.css">
+        <meta name="viewport" content="initial-scale=1.0">
+       
+    </head>
+    <body>
+        <div class="home">
+                <div id="map"></div>
+                <script type="">
+                  function initMap(){
+                    var option={
+                      zoom:8,
+                      center:{lat:42.8584,lng:-70.9300}
+                    }
+                    var map=new google.maps.Map(document.getElementById('map'),option);
+                    
+                  function addmarker(coords){
+                   var marker=new google.maps.Marker({
+                      position:coords
+                      , map:map,
+                      draggable:true
+                     
+                    });
+                   marker.setMap(map);
+            
+                 }
+                  addmarker({
+                        lat:42.8584,lng:-70.9300});
+            
+                  }
+               
+                </script>
+            <div class=form>
+                      <div class=img>
+                          <h2>contact us</h2>
+                          <p>feel free to drop us a line below !</p>
+                   
+                        </div>   
+                <form class="contact">
+                    <div class="inputform">
+                             <label for="name">Full Name:</label>
+                             <div class="pp">   <input class="input" type="text" name="Full Name" placeholder="Enter Full Name">  </div>      
+                     </div>
+                     <div class="inputform" >
+                            <label for="name">Email:</label>
+                            <div class="pp">  <input class="input" type="text" name="email" placeholder="Enter Email Address"></div>
+                           
+                        </div>
+                        
+                        <div class="inputform" >
+                                <label for="name">Phone:</label>
+                                <div class="pp">  <input class="input" name="Phone" placeholder="Enter Phone Number"></div>
+                                
+                        </div>
+    
+                        <div class="inputformo" >
+                            <label for="name">Message:</label>
+                        </div>
+                        <div class="pp">
+                           <textarea class="input" name="message" placeholder="Your Comment..."></textarea>
+                        </div>  
+                        
+                            <div>
+                                <button class="button">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>     
+
+
+
+
+                </form>
+                
+            </div>
+         </div>
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAG9Fdfkjav9Cbrc2FnuP1UGuTBnlAwlDU&callback=initMap"
+         async defer></script>
+    </body>
